@@ -1,39 +1,38 @@
-import React from 'react'
-import facebook_icon from '../../assets/facebook_icon.png'
-import twitter_icon from '../../assets/twitter_icon.png'
-import instagram_icon from '../../assets/instagram_icon.png'
-import youtube_icon from '../../assets/youtube_icon.png'
-import './Footer.css'
+import React, { memo } from 'react'
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 
-
-const Footer = () => {
+const Footer = memo(() => {
   return (
-    <div className='Footer'>
-        <div className="social">
-            <img src={facebook_icon} alt="facebook_icon" />
-            <img src={twitter_icon} alt="twitter_icon" />
-            <img src={instagram_icon} alt="instagram_icon" />
-            <img src={youtube_icon} alt="youtube_icon" />
-        </div>
-        
-        <ul>
-<li>Audio Despcreption </li>
-<li> Help Center </li>
-<li>Media Center </li>
-<li>Gifts Cards </li>
-<li>Investor Relations </li>
-<li> Jops</li>
-<li> Terms of Use</li>
-<li>Privacy </li>
-<li> Legal Notice</li>
-<li>Cookie Preferences </li>
-<li>Contact Us </li>
-<li>corporate Information </li>
-        </ul>
-        
-        
-         </div>
+    <footer className="mx-auto max-w-5xl px-4 py-12 text-gray-500 lg:px-8">
+      <div className="flex space-x-6 mb-6">
+        <Facebook className="h-6 w-6 cursor-pointer hover:text-white transition" />
+        <Instagram className="h-6 w-6 cursor-pointer hover:text-white transition" />
+        <Twitter className="h-6 w-6 cursor-pointer hover:text-white transition" />
+        <Youtube className="h-6 w-6 cursor-pointer hover:text-white transition" />
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 text-xs sm:grid-cols-3 md:grid-cols-4">
+        <p className="cursor-pointer hover:underline">Audio Description</p>
+        <p className="cursor-pointer hover:underline">Help Center</p>
+        <p className="cursor-pointer hover:underline">Gift Cards</p>
+        <p className="cursor-pointer hover:underline">Media Center</p>
+        <p className="cursor-pointer hover:underline">Investor Relations</p>
+        <p className="cursor-pointer hover:underline">Jobs</p>
+        <p className="cursor-pointer hover:underline">Terms of Use</p>
+        <p className="cursor-pointer hover:underline">Privacy</p>
+        <p className="cursor-pointer hover:underline">Legal Notices</p>
+        <p className="cursor-pointer hover:underline">Cookie Preferences</p>
+        <p className="cursor-pointer hover:underline">Corporate Information</p>
+        <p className="cursor-pointer hover:underline">Contact Us</p>
+      </div>
+
+      <div className="mt-8 border border-gray-600 px-2 py-1 text-xs inline-block cursor-pointer hover:text-white transition">
+        Service Code
+      </div>
+
+      <p className="mt-6 text-[10px]">© 1997-2024 Netflix, Inc.</p>
+    </footer>
   )
-}
+})
 
 export default Footer
